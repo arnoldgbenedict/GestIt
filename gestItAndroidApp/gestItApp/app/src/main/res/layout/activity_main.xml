@@ -1,0 +1,271 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="horizontal">
+
+	<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginBottom="0dp"
+		android:layout_marginLeft="0dp"
+		android:layout_marginRight="0dp"
+		android:layout_marginTop="0dp">
+
+
+		<org.rajawali3d.view.SurfaceView
+			android:id="@+id/ar_view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:layout_gravity="top"
+			android:layout_marginEnd="8dp"
+			android:layout_marginLeft="0dp"
+			android:layout_marginRight="0dp"
+			android:layout_marginStart="8dp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintHorizontal_bias="0.0"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:layout_constraintVertical_bias="0.0" />
+
+		<Button
+			android:id="@+id/captureBackgroundShow"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginBottom="0dp"
+			android:layout_marginLeft="0dp"
+			android:layout_marginRight="0dp"
+			android:layout_marginTop="0dp"
+			android:backgroundTint="@android:color/background_dark"
+			app:layout_constraintBottom_toBottomOf="@+id/buttonON_OFF"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="@+id/captureBackground"
+			app:layout_constraintTop_toTopOf="@+id/captureBackground" />
+
+		<Button
+			android:id="@+id/captureBackground"
+			style="@android:style/Widget.Holo.Button"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentStart="true"
+			android:layout_below="@+id/linearLayout"
+			android:background="@android:color/transparent"
+			android:contextClickable="false"
+			android:elevation="0dp"
+			app:layout_constraintBottom_toBottomOf="@+id/ar_view"
+			app:layout_constraintLeft_toLeftOf="@+id/ar_view"
+			app:layout_constraintRight_toRightOf="@+id/ar_view"
+			app:layout_constraintTop_toTopOf="@+id/ar_view" />
+
+		<Button
+			android:id="@+id/buttonON_OFF"
+			android:layout_width="0dp"
+			android:layout_height="100dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentStart="true"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginLeft="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginStart="8dp"
+			android:elevation="7dp"
+			app:layout_constraintBottom_toBottomOf="@+id/ar_view"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+		<RadioButton
+			android:id="@+id/radioButton"
+			style="@android:style/Widget.DeviceDefault.CompoundButton.RadioButton"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true"
+			android:checked="true"
+			android:editable="false"
+			android:layout_marginRight="8dp"
+			app:layout_constraintRight_toRightOf="@+id/ar_view"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/ar_view"
+			app:layout_constraintBottom_toBottomOf="parent"
+			android:layout_marginBottom="8dp"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_marginTop="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp" />
+
+		<Button
+			android:id="@+id/addItemButton"
+			android:layout_width="64dp"
+			android:layout_height="48dp"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentEnd="true"
+			android:layout_marginBottom="8dp"
+			android:layout_marginEnd="8dp"
+			android:layout_marginRight="8dp"
+			android:backgroundTint="@android:color/holo_blue_dark"
+			android:elevation="12dp"
+			android:text="+"
+			android:textSize="24sp"
+			android:textStyle="bold"
+			app:layout_constraintBottom_toBottomOf="@+id/buttonON_OFF"
+			app:layout_constraintRight_toRightOf="@+id/ar_view" />
+
+		<TextView
+			android:id="@+id/appName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_above="@+id/seekBar"
+			android:layout_toStartOf="@+id/settings"
+			android:background="@android:color/background_light"
+			android:text="Something"
+			android:textColor="@android:color/holo_blue_dark"
+			android:textSize="30sp"
+			android:layout_marginRight="8dp"
+			app:layout_constraintRight_toRightOf="@+id/ar_view"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/ar_view"
+			android:layout_marginBottom="73dp"
+			app:layout_constraintBottom_toTopOf="@+id/buttonON_OFF"
+			app:layout_constraintHorizontal_bias="0.498"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp" />
+
+		<Button
+			android:id="@+id/editAppName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBottom="@+id/appName"
+			android:layout_alignTop="@+id/appName"
+			android:layout_toEndOf="@+id/appName"
+			android:backgroundTint="@android:color/holo_blue_light"
+			android:text="Edit"
+			android:textSize="10sp"
+			app:layout_constraintLeft_toRightOf="@+id/appName"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintTop_toTopOf="@+id/appName"
+			android:layout_marginTop="8dp"
+			app:layout_constraintBottom_toBottomOf="@+id/appName"
+			android:layout_marginStart="8dp" />
+
+		<SeekBar
+			android:id="@+id/seekBar"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_above="@+id/buttonON_OFF"
+			android:layout_alignParentStart="true"
+			android:background="@android:color/darker_gray"
+			android:max="100"
+			android:layout_marginBottom="3dp"
+			app:layout_constraintBottom_toTopOf="@+id/buttonON_OFF"
+			android:layout_marginRight="8dp"
+			app:layout_constraintRight_toRightOf="@+id/ar_view"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/ar_view"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp" />
+
+		<Button
+			android:id="@+id/settings"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignEnd="@+id/TrackPad"
+			android:layout_alignParentTop="true"
+			android:layout_marginEnd="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_marginTop="8dp"
+			android:backgroundTint="@android:color/black"
+			android:elevation="7dp"
+			android:text="Settings"
+			app:layout_constraintRight_toRightOf="@+id/ar_view"
+			app:layout_constraintTop_toTopOf="@+id/ar_view" />
+
+		<Button
+			android:id="@+id/button"
+			android:layout_width="121dp"
+			android:layout_height="49dp"
+			android:layout_below="@+id/settings"
+			android:layout_toEndOf="@+id/radioButton"
+			android:elevation="2dp"
+			android:text="Keyboard"
+			android:layout_marginBottom="16dp"
+			app:layout_constraintBottom_toTopOf="@+id/TrackPad"
+			app:layout_constraintLeft_toRightOf="@+id/radioButton"
+			android:layout_marginLeft="16dp"
+			android:layout_marginStart="16dp" />
+
+		<Button
+			android:id="@+id/button3"
+			android:layout_width="121dp"
+			android:layout_height="49dp"
+			android:layout_alignBaseline="@+id/button"
+			android:layout_alignBottom="@+id/button"
+			android:layout_toStartOf="@+id/radioButton"
+			android:elevation="2dp"
+			android:text="Mouse"
+			android:layout_marginBottom="16dp"
+			app:layout_constraintBottom_toTopOf="@+id/TrackPad"
+			app:layout_constraintRight_toLeftOf="@+id/radioButton"
+			android:layout_marginRight="16dp"
+			android:layout_marginEnd="16dp" />
+
+		<Button
+			android:id="@+id/rightClick"
+			android:layout_width="205dp"
+			android:layout_height="72dp"
+			android:layout_alignBottom="@+id/leftClick"
+			android:layout_alignParentEnd="true"
+			android:layout_marginEnd="8dp"
+			android:layout_marginRight="8dp"
+			android:layout_toEndOf="@+id/radioButton"
+			android:elevation="2dp"
+			app:layout_constraintRight_toRightOf="@+id/TrackPad"
+			app:layout_constraintTop_toBottomOf="@+id/TrackPad" />
+
+		<Button
+			android:id="@+id/leftClick"
+			android:layout_width="205dp"
+			android:layout_height="72dp"
+			android:layout_alignParentStart="true"
+			android:layout_below="@+id/TrackPad"
+			android:layout_marginLeft="8dp"
+			android:layout_marginStart="8dp"
+			android:layout_toStartOf="@+id/radioButton"
+			android:elevation="2dp"
+			app:layout_constraintLeft_toLeftOf="@+id/TrackPad"
+			app:layout_constraintTop_toBottomOf="@+id/TrackPad" />
+
+		<ImageView
+			android:id="@+id/TrackPad"
+			android:layout_width="410dp"
+			android:layout_height="224dp"
+			android:layout_below="@+id/button"
+			android:layout_centerHorizontal="true"
+			android:background="@android:color/darker_gray"
+			app:layout_constraintTop_toTopOf="@+id/ar_view"
+			android:layout_marginTop="134dp"
+			android:layout_marginRight="8dp"
+			app:layout_constraintRight_toRightOf="@+id/ar_view"
+			android:layout_marginLeft="8dp"
+			app:layout_constraintLeft_toLeftOf="@+id/ar_view"
+			app:layout_constraintHorizontal_bias="0.533"
+			android:layout_marginStart="8dp"
+			android:layout_marginEnd="8dp" />
+
+		<SeekBar
+			android:id="@+id/seekBar2"
+			android:layout_width="208dp"
+			android:layout_height="18dp"
+			android:layout_alignStart="@+id/TrackPad"
+			android:layout_below="@+id/settings"
+			android:max="200"
+			tools:layout_editor_absoluteX="53dp"
+			tools:layout_editor_absoluteY="38dp" />
+
+
+	</android.support.constraint.ConstraintLayout>
+</LinearLayout>

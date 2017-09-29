@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:padding="20dp"
+        android:text="Click On the Master Module Port Name"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:visibility="invisible" />
+
+    <ListView
+        android:id="@+id/listView"
+        style="@style/Widget.AppCompat.Light.ListView.DropDown"
+        android:layout_width="wrap_content"
+        android:layout_height="508dp"
+        android:divider="@android:color/background_light"
+        android:paddingLeft="30dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="SEARCH DEVICES"
+        android:textColor="@android:color/background_light" />
+</LinearLayout>
